@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento Web</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f4fa; 
+        }
+
+        header {
+            text-align: center;
+            padding: 25px 0;
+            font-size: 32px;
+            font-weight: bold;
+            background: #a9c8ff; 
+            color: #fff;
+            border-bottom: 4px solid #7ea9e9;
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .botones {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        button {
+            padding: 18px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+       
+        .btn-seo {
+            background: #ffd1dc; 
+        }
+
+        .btn-seo:hover {
+            background: #ffbfd0;
+        }
+
+        .btn-sem {
+            background: #ffedc2; 
+        }
+
+        .btn-sem:hover {
+            background: #ffe2a3;
+        }
+
+        .btn-visibilidad {
+            background: #c9f7d6; 
+        }
+
+        .btn-visibilidad:hover {
+            background: #b4f3c6;
+        }
+
+        .info {
+            padding: 20px;
+            border-radius: 10px;
+            background: #ffffff;
+            min-height: 250px;
+            font-size: 18px;
+            border: 2px solid #d3d8e0;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #7ea9e9;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 16px;
+            border-top: 4px solid #5e88c4;
+        }
+    </style>
+</head>
+<body>
+
+    <header>Posicionamiento Web</header>
+
+    <div class="contenedor">
+
+       
+        <div class="botones">
+            <button class="btn-seo" onclick="mostrarInfo('seo')">SEO</button>
+            <button class="btn-sem" onclick="mostrarInfo('sem')">SEM</button>
+            <button class="btn-visibilidad" onclick="mostrarInfo('visibilidad')">Visibilidad en resultados</button>
+        </div>
+
+        
+        <div class="info" id="info">
+            Haz clic en un botón para ver la información.
+        </div>
+
+    </div>
+
+    <footer>
+        Alejandra Michelle Sanchez Terrazas
+    </footer>
+
+    <script>
+        function mostrarInfo(seccion) {
+            let texto = "";
+
+            if (seccion === "seo") {
+                texto = "<h2>SEO</h2><p>El SEO (Search Engine Optimization) consiste en optimizar una página web para aparecer de manera orgánica en los primeros lugares de los motores de búsqueda.</p>";
+            }
+
+            if (seccion === "sem") {
+                texto = "<h2>SEM</h2><p>El SEM (Search Engine Marketing) usa anuncios de pago para posicionarte rápidamente en los resultados de búsqueda.</p>";
+            }
+
+            if (seccion === "visibilidad") {
+                texto = "<h2>Visibilidad en resultados</h2><p>Se refiere a qué tan fácilmente aparece tu sitio cuando los usuarios buscan términos relacionados a tu contenido.</p>";
+            }
+
+            document.getElementById("info").innerHTML = texto;
+        }
+    </script>
+
+</body>
+</html>
